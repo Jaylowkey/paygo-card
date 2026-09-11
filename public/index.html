@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayGo Card — Bridgecard Lab</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div><span class="logo">PG</span><div><strong>PayGo Card</strong><small>Bridgecard API Lab</small></div></div>
+      <label class="env">Environment
+        <select id="env"><option value="sandbox">Sandbox</option><option value="production">Production</option></select>
+      </label>
+    </header>
+
+    <section class="hero">
+      <div><span class="badge">API TEST CONSOLE</span><h1>Testa a Bridgecard sem tocar no PayGo principal.</h1><p>Protótipo independente para validar cardholders, cartões, saldo e transações.</p></div>
+      <button id="health">Testar conexão</button>
+    </section>
+
+    <section class="grid">
+      <article class="card"><h2>Cardholders</h2><p>Consultar os clientes registados na Bridgecard.</p><button data-action="cardholders">Listar cardholders</button></article>
+      <article class="card"><h2>Cartões</h2><p>Consultar os cartões emitidos na conta.</p><button data-action="cards">Listar cartões</button></article>
+      <article class="card"><h2>Detalhes / saldo</h2><input id="cardId" placeholder="Card ID"/><div class="row"><button data-action="card-details">Detalhes</button><button data-action="card-balance">Saldo</button></div></article>
+      <article class="card"><h2>Transações</h2><input id="txCardId" placeholder="Card ID"/><button data-action="card-transactions">Ver transações</button></article>
+    </section>
+
+    <section class="console card"><div class="console-head"><h2>API Console</h2><span id="status">Aguardando teste</span></div><pre id="output">Clique numa operação para começar.</pre></section>
+    <footer>PayGo Card Prototype · Bridgecard integration lab</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
